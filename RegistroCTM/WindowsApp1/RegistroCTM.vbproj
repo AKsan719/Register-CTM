@@ -127,6 +127,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormConsulta.resx">
+      <DependentUpon>FormConsulta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPago.resx">
       <DependentUpon>FormPago.vb</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +138,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistro.resx">
       <DependentUpon>FormRegistro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRetiros.resx">
+      <DependentUpon>FormRetiros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTotales.resx">
+      <DependentUpon>FormTotales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

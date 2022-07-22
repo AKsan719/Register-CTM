@@ -11,3 +11,7 @@ C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\WindowsApp1.xml
 C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\WindowsApp1.pdb
 C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\RegistroCTM.vbproj.AssemblyReference.cache
 C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\WindowsApp1.FormRegistro.resources
+C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\WindowsApp1.FormPago.resources
+C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\WindowsApp1.FormConsulta.resources
+C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\WindowsApp1.FormTotales.resources
+C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\WindowsApp1.FormRetiros.resources

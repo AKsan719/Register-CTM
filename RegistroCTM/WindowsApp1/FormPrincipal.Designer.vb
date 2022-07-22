@@ -66,6 +66,7 @@ Partial Class FormPrincipal
         'ButtonPagos
         '
         Me.ButtonPagos.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonPagos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ButtonPagos.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ButtonPagos.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.ButtonPagos.FlatAppearance.BorderSize = 2
