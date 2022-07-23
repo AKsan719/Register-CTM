@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion_general.vb" />
     <Compile Include="FormConsulta.Designer.vb">
       <DependentUpon>FormConsulta.vb</DependentUpon>
     </Compile>
@@ -125,6 +126,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Registro_CTMDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Registro_CTMDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormConsulta.resx">
@@ -165,6 +171,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Registro_CTMDataSet.xsc">
+      <DependentUpon>Registro_CTMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Registro_CTMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Registro_CTMDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Registro_CTMDataSet.xss">
+      <DependentUpon>Registro_CTMDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\fondo.jpg" />
   </ItemGroup>
   <ItemGroup>

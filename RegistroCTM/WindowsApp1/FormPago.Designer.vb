@@ -38,6 +38,8 @@ Partial Class FormPago
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextTipoMoto = New System.Windows.Forms.TextBox()
+        Me.TextNmeroMoto = New System.Windows.Forms.TextBox()
         Me.TextRecibido = New System.Windows.Forms.TextBox()
         Me.TotalPago = New System.Windows.Forms.TextBox()
         Me.CuotaPago = New System.Windows.Forms.TextBox()
@@ -45,8 +47,6 @@ Partial Class FormPago
         Me.DateTimeFechaActual = New System.Windows.Forms.DateTimePicker()
         Me.DateTimeConcepto = New System.Windows.Forms.DateTimePicker()
         Me.ComboNombreCliente = New System.Windows.Forms.ComboBox()
-        Me.TextNmeroMoto = New System.Windows.Forms.TextBox()
-        Me.TextTipoMoto = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -271,6 +271,30 @@ Partial Class FormPago
         Me.TextBox2.TabIndex = 2
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'TextTipoMoto
+        '
+        Me.TextTipoMoto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextTipoMoto.Location = New System.Drawing.Point(207, 97)
+        Me.TextTipoMoto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextTipoMoto.Name = "TextTipoMoto"
+        Me.TextTipoMoto.Size = New System.Drawing.Size(410, 23)
+        Me.TextTipoMoto.TabIndex = 2
+        Me.TextTipoMoto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextNmeroMoto
+        '
+        Me.TextNmeroMoto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextNmeroMoto.Location = New System.Drawing.Point(207, 65)
+        Me.TextNmeroMoto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextNmeroMoto.Name = "TextNmeroMoto"
+        Me.TextNmeroMoto.Size = New System.Drawing.Size(410, 23)
+        Me.TextNmeroMoto.TabIndex = 2
+        Me.TextNmeroMoto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'TextRecibido
         '
         Me.TextRecibido.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -291,6 +315,7 @@ Partial Class FormPago
         Me.TotalPago.Location = New System.Drawing.Point(207, 248)
         Me.TotalPago.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TotalPago.Name = "TotalPago"
+        Me.TotalPago.ReadOnly = True
         Me.TotalPago.Size = New System.Drawing.Size(122, 23)
         Me.TotalPago.TabIndex = 2
         Me.TotalPago.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -324,6 +349,7 @@ Partial Class FormPago
         Me.DateTimeFechaActual.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DateTimeFechaActual.Enabled = False
         Me.DateTimeFechaActual.Location = New System.Drawing.Point(207, 158)
         Me.DateTimeFechaActual.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DateTimeFechaActual.Name = "DateTimeFechaActual"
@@ -352,30 +378,6 @@ Partial Class FormPago
         Me.ComboNombreCliente.Name = "ComboNombreCliente"
         Me.ComboNombreCliente.Size = New System.Drawing.Size(410, 23)
         Me.ComboNombreCliente.TabIndex = 0
-        '
-        'TextNmeroMoto
-        '
-        Me.TextNmeroMoto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextNmeroMoto.Location = New System.Drawing.Point(207, 65)
-        Me.TextNmeroMoto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextNmeroMoto.Name = "TextNmeroMoto"
-        Me.TextNmeroMoto.Size = New System.Drawing.Size(410, 23)
-        Me.TextNmeroMoto.TabIndex = 2
-        Me.TextNmeroMoto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TextTipoMoto
-        '
-        Me.TextTipoMoto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextTipoMoto.Location = New System.Drawing.Point(207, 97)
-        Me.TextTipoMoto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextTipoMoto.Name = "TextTipoMoto"
-        Me.TextTipoMoto.Size = New System.Drawing.Size(410, 23)
-        Me.TextTipoMoto.TabIndex = 2
-        Me.TextTipoMoto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'FormPago
         '

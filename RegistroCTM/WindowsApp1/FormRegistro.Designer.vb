@@ -22,17 +22,19 @@ Partial Class FormRegistro
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormRegistro))
         Me.ButtonVisualizar = New System.Windows.Forms.Button()
         Me.ButtonEliminar = New System.Windows.Forms.Button()
         Me.ButtonGuardar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextTipoMoto = New System.Windows.Forms.TextBox()
         Me.TextNumeroMoto = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextNombreMiembro = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.DataGridRegistro = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridRegistro, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,20 +101,6 @@ Partial Class FormRegistro
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "Tipo De Moto:"
         '
-        'TextTipoMoto
-        '
-        Me.TextTipoMoto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextTipoMoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextTipoMoto.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextTipoMoto.Location = New System.Drawing.Point(332, 97)
-        Me.TextTipoMoto.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextTipoMoto.Name = "TextTipoMoto"
-        Me.TextTipoMoto.Size = New System.Drawing.Size(514, 22)
-        Me.TextTipoMoto.TabIndex = 16
-        Me.TextTipoMoto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'TextNumeroMoto
         '
         Me.TextNumeroMoto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -172,11 +160,11 @@ Partial Class FormRegistro
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.ButtonVisualizar)
         Me.GroupBox1.Controls.Add(Me.ButtonEliminar)
         Me.GroupBox1.Controls.Add(Me.ButtonGuardar)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TextTipoMoto)
         Me.GroupBox1.Controls.Add(Me.TextNumeroMoto)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.TextNombreMiembro)
@@ -191,15 +179,44 @@ Partial Class FormRegistro
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "ENTRADA DE DATOS "
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Combi", "Mamut"})
+        Me.ComboBox1.Location = New System.Drawing.Point(332, 99)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(514, 23)
+        Me.ComboBox1.TabIndex = 22
+        '
         'DataGridRegistro
         '
+        Me.DataGridRegistro.AllowUserToAddRows = False
+        Me.DataGridRegistro.AllowUserToOrderColumns = True
         Me.DataGridRegistro.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridRegistro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridRegistro.BackgroundColor = System.Drawing.SystemColors.InactiveCaption
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridRegistro.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridRegistro.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridRegistro.Location = New System.Drawing.Point(17, 258)
         Me.DataGridRegistro.Name = "DataGridRegistro"
+        Me.DataGridRegistro.ReadOnly = True
         Me.DataGridRegistro.Size = New System.Drawing.Size(1034, 249)
         Me.DataGridRegistro.TabIndex = 23
         '
@@ -228,11 +245,11 @@ Partial Class FormRegistro
     Friend WithEvents ButtonEliminar As Button
     Friend WithEvents ButtonGuardar As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextTipoMoto As TextBox
     Friend WithEvents TextNumeroMoto As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TextNombreMiembro As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DataGridRegistro As DataGridView
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

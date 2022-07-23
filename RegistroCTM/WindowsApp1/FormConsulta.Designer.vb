@@ -22,6 +22,7 @@ Partial Class FormConsulta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConsulta))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ComboBuscaCliente = New System.Windows.Forms.ComboBox()
@@ -41,9 +42,11 @@ Partial Class FormConsulta
         Me.TextBuscaNombreMiembro = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridBusqueda = New System.Windows.Forms.DataGridView()
+        Me.PagosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridBusqueda, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -165,9 +168,11 @@ Partial Class FormConsulta
         Me.BuscaTotalAporte.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BuscaTotalAporte.Enabled = False
         Me.BuscaTotalAporte.Location = New System.Drawing.Point(990, 104)
         Me.BuscaTotalAporte.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.BuscaTotalAporte.Name = "BuscaTotalAporte"
+        Me.BuscaTotalAporte.ReadOnly = True
         Me.BuscaTotalAporte.Size = New System.Drawing.Size(122, 23)
         Me.BuscaTotalAporte.TabIndex = 25
         Me.BuscaTotalAporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -177,9 +182,11 @@ Partial Class FormConsulta
         Me.BuscaTotalCuota.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BuscaTotalCuota.Enabled = False
         Me.BuscaTotalCuota.Location = New System.Drawing.Point(990, 74)
         Me.BuscaTotalCuota.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.BuscaTotalCuota.Name = "BuscaTotalCuota"
+        Me.BuscaTotalCuota.ReadOnly = True
         Me.BuscaTotalCuota.Size = New System.Drawing.Size(122, 23)
         Me.BuscaTotalCuota.TabIndex = 26
         Me.BuscaTotalCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -189,9 +196,11 @@ Partial Class FormConsulta
         Me.BuscaTotalAhorro.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BuscaTotalAhorro.Enabled = False
         Me.BuscaTotalAhorro.Location = New System.Drawing.Point(990, 44)
         Me.BuscaTotalAhorro.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.BuscaTotalAhorro.Name = "BuscaTotalAhorro"
+        Me.BuscaTotalAhorro.ReadOnly = True
         Me.BuscaTotalAhorro.Size = New System.Drawing.Size(122, 23)
         Me.BuscaTotalAhorro.TabIndex = 27
         Me.BuscaTotalAhorro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -214,10 +223,12 @@ Partial Class FormConsulta
         Me.TextBuscaTipoMoto.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.TextBuscaTipoMoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBuscaTipoMoto.Enabled = False
         Me.TextBuscaTipoMoto.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBuscaTipoMoto.Location = New System.Drawing.Point(260, 102)
         Me.TextBuscaTipoMoto.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBuscaTipoMoto.Name = "TextBuscaTipoMoto"
+        Me.TextBuscaTipoMoto.ReadOnly = True
         Me.TextBuscaTipoMoto.Size = New System.Drawing.Size(551, 22)
         Me.TextBuscaTipoMoto.TabIndex = 22
         Me.TextBuscaTipoMoto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -227,10 +238,12 @@ Partial Class FormConsulta
         Me.TextBuscaNumeroMoto.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.TextBuscaNumeroMoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBuscaNumeroMoto.Enabled = False
         Me.TextBuscaNumeroMoto.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBuscaNumeroMoto.Location = New System.Drawing.Point(260, 70)
         Me.TextBuscaNumeroMoto.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBuscaNumeroMoto.Name = "TextBuscaNumeroMoto"
+        Me.TextBuscaNumeroMoto.ReadOnly = True
         Me.TextBuscaNumeroMoto.Size = New System.Drawing.Size(551, 22)
         Me.TextBuscaNumeroMoto.TabIndex = 23
         Me.TextBuscaNumeroMoto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -253,10 +266,12 @@ Partial Class FormConsulta
         Me.TextBuscaNombreMiembro.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.TextBuscaNombreMiembro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBuscaNombreMiembro.Enabled = False
         Me.TextBuscaNombreMiembro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBuscaNombreMiembro.Location = New System.Drawing.Point(260, 37)
         Me.TextBuscaNombreMiembro.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBuscaNombreMiembro.Name = "TextBuscaNombreMiembro"
+        Me.TextBuscaNombreMiembro.ReadOnly = True
         Me.TextBuscaNombreMiembro.Size = New System.Drawing.Size(551, 22)
         Me.TextBuscaNombreMiembro.TabIndex = 24
         Me.TextBuscaNombreMiembro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -276,16 +291,24 @@ Partial Class FormConsulta
         '
         'DataGridBusqueda
         '
+        Me.DataGridBusqueda.AllowUserToAddRows = False
         Me.DataGridBusqueda.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridBusqueda.AutoGenerateColumns = False
+        Me.DataGridBusqueda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridBusqueda.BackgroundColor = System.Drawing.SystemColors.InactiveCaption
         Me.DataGridBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridBusqueda.DataSource = Me.PagosBindingSource
         Me.DataGridBusqueda.Location = New System.Drawing.Point(31, 270)
         Me.DataGridBusqueda.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.DataGridBusqueda.Name = "DataGridBusqueda"
         Me.DataGridBusqueda.Size = New System.Drawing.Size(1187, 300)
         Me.DataGridBusqueda.TabIndex = 2
+        '
+        'PagosBindingSource
+        '
+        Me.PagosBindingSource.DataMember = "Pagos"
         '
         'FormConsulta
         '
@@ -306,6 +329,7 @@ Partial Class FormConsulta
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.DataGridBusqueda, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -328,4 +352,17 @@ Partial Class FormConsulta
     Friend WithEvents BuscaTotalAporte As TextBox
     Friend WithEvents BuscaTotalCuota As TextBox
     Friend WithEvents BuscaTotalAhorro As TextBox
+    Friend WithEvents PagosBindingSource As BindingSource
+    Friend WithEvents IdPagosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreMiembroDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NumeroMotoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TipoMotoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ConceptoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaDeEmisionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AhorroDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CuotaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TotalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RecibidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ObservacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EstadoDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
 End Class

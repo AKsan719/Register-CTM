@@ -27,6 +27,7 @@ Partial Class FormRetiros
         Me.ButtonLRegistroRetiro = New System.Windows.Forms.Button()
         Me.ButtonImprimirRetiro = New System.Windows.Forms.Button()
         Me.ButtonGuardarRetiro = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -36,6 +37,7 @@ Partial Class FormRetiros
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextTipoMoto = New System.Windows.Forms.TextBox()
         Me.TextNmeroMoto = New System.Windows.Forms.TextBox()
         Me.TextRecibido = New System.Windows.Forms.TextBox()
         Me.TotalPago = New System.Windows.Forms.TextBox()
@@ -43,8 +45,6 @@ Partial Class FormRetiros
         Me.PagoAhorro = New System.Windows.Forms.TextBox()
         Me.DateTimeFechaActual = New System.Windows.Forms.DateTimePicker()
         Me.ComboNombreCliente = New System.Windows.Forms.ComboBox()
-        Me.TextTipoMoto = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridRegistroRetiro = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridRegistroRetiro, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -98,7 +98,7 @@ Partial Class FormRetiros
         Me.ButtonLRegistroRetiro.Name = "ButtonLRegistroRetiro"
         Me.ButtonLRegistroRetiro.Size = New System.Drawing.Size(284, 44)
         Me.ButtonLRegistroRetiro.TabIndex = 22
-        Me.ButtonLRegistroRetiro.Text = "Registro De Retiro"
+        Me.ButtonLRegistroRetiro.Text = "Historial De Retiro"
         Me.ButtonLRegistroRetiro.UseVisualStyleBackColor = False
         '
         'ButtonImprimirRetiro
@@ -133,18 +133,31 @@ Partial Class FormRetiros
         Me.ButtonGuardarRetiro.Text = "Guardar Retiro"
         Me.ButtonGuardarRetiro.UseVisualStyleBackColor = False
         '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(151, 104)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(54, 15)
+        Me.Label3.TabIndex = 17
+        Me.Label3.Text = "Motivo:"
+        '
         'Label2
         '
         Me.Label2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(79, 69)
+        Me.Label2.Location = New System.Drawing.Point(154, 67)
         Me.Label2.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(119, 15)
+        Me.Label2.Size = New System.Drawing.Size(51, 15)
         Me.Label2.TabIndex = 18
-        Me.Label2.Text = "Numero De Moto:"
+        Me.Label2.Text = "Cargo:"
         '
         'Label9
         '
@@ -152,7 +165,7 @@ Partial Class FormRetiros
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(59, 32)
+        Me.Label9.Location = New System.Drawing.Point(60, 31)
         Me.Label9.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(145, 15)
@@ -178,7 +191,7 @@ Partial Class FormRetiros
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(131, 279)
+        Me.Label1.Location = New System.Drawing.Point(137, 278)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(68, 15)
@@ -191,12 +204,12 @@ Partial Class FormRetiros
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(155, 239)
+        Me.Label8.Location = New System.Drawing.Point(104, 242)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(44, 15)
+        Me.Label8.Size = New System.Drawing.Size(101, 15)
         Me.Label8.TabIndex = 3
-        Me.Label8.Text = "Total:"
+        Me.Label8.Text = "Saldo En Caja:"
         '
         'Label7
         '
@@ -204,12 +217,12 @@ Partial Class FormRetiros
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(149, 208)
+        Me.Label7.Location = New System.Drawing.Point(101, 208)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(50, 15)
+        Me.Label7.Size = New System.Drawing.Size(104, 15)
         Me.Label7.TabIndex = 3
-        Me.Label7.Text = "Cuota:"
+        Me.Label7.Text = "Monto En Caja:"
         '
         'Label6
         '
@@ -217,12 +230,12 @@ Partial Class FormRetiros
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(145, 174)
+        Me.Label6.Location = New System.Drawing.Point(154, 173)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(56, 15)
+        Me.Label6.Size = New System.Drawing.Size(51, 15)
         Me.Label6.TabIndex = 3
-        Me.Label6.Text = "Ahorro:"
+        Me.Label6.Text = "Retiro:"
         '
         'Label5
         '
@@ -230,7 +243,7 @@ Partial Class FormRetiros
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(100, 144)
+        Me.Label5.Location = New System.Drawing.Point(109, 142)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(96, 15)
@@ -248,6 +261,18 @@ Partial Class FormRetiros
         Me.TextBox2.Size = New System.Drawing.Size(694, 23)
         Me.TextBox2.TabIndex = 2
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextTipoMoto
+        '
+        Me.TextTipoMoto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextTipoMoto.Location = New System.Drawing.Point(276, 101)
+        Me.TextTipoMoto.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextTipoMoto.Name = "TextTipoMoto"
+        Me.TextTipoMoto.Size = New System.Drawing.Size(694, 23)
+        Me.TextTipoMoto.TabIndex = 2
+        Me.TextTipoMoto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TextNmeroMoto
         '
@@ -281,6 +306,7 @@ Partial Class FormRetiros
         Me.TotalPago.Location = New System.Drawing.Point(276, 239)
         Me.TotalPago.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TotalPago.Name = "TotalPago"
+        Me.TotalPago.ReadOnly = True
         Me.TotalPago.Size = New System.Drawing.Size(310, 23)
         Me.TotalPago.TabIndex = 2
         Me.TotalPago.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -314,6 +340,7 @@ Partial Class FormRetiros
         Me.DateTimeFechaActual.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DateTimeFechaActual.Enabled = False
         Me.DateTimeFechaActual.Location = New System.Drawing.Point(276, 136)
         Me.DateTimeFechaActual.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DateTimeFechaActual.Name = "DateTimeFechaActual"
@@ -332,36 +359,13 @@ Partial Class FormRetiros
         Me.ComboNombreCliente.Size = New System.Drawing.Size(694, 23)
         Me.ComboNombreCliente.TabIndex = 0
         '
-        'TextTipoMoto
-        '
-        Me.TextTipoMoto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextTipoMoto.Location = New System.Drawing.Point(276, 101)
-        Me.TextTipoMoto.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextTipoMoto.Name = "TextTipoMoto"
-        Me.TextTipoMoto.Size = New System.Drawing.Size(694, 23)
-        Me.TextTipoMoto.TabIndex = 2
-        Me.TextTipoMoto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(100, 104)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(95, 15)
-        Me.Label3.TabIndex = 17
-        Me.Label3.Text = "Tipo De Moto:"
-        '
         'DataGridRegistroRetiro
         '
+        Me.DataGridRegistroRetiro.AllowUserToAddRows = False
         Me.DataGridRegistroRetiro.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridRegistroRetiro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridRegistroRetiro.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.DataGridRegistroRetiro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridRegistroRetiro.Location = New System.Drawing.Point(16, 438)
@@ -412,4 +416,15 @@ Partial Class FormRetiros
     Friend WithEvents Label3 As Label
     Friend WithEvents TextTipoMoto As TextBox
     Friend WithEvents DataGridRegistroRetiro As DataGridView
+    Friend WithEvents IdRetiroDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreMiembroDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NumeroMotoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TipoMotoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaDeEmisionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MontoRetiroDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MontoEnCajaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SaldoEnCajaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RecibidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ObservacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EstadoDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
 End Class
