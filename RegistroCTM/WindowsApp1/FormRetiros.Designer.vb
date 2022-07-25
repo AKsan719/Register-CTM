@@ -22,6 +22,7 @@ Partial Class FormRetiros
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormRetiros))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ButtonLRegistroRetiro = New System.Windows.Forms.Button()
@@ -46,8 +47,24 @@ Partial Class FormRetiros
         Me.DateTimeFechaActual = New System.Windows.Forms.DateTimePicker()
         Me.ComboNombreCliente = New System.Windows.Forms.ComboBox()
         Me.DataGridRegistroRetiro = New System.Windows.Forms.DataGridView()
+        Me.Registro_CTMDataSet = New RegistroCTM.Registro_CTMDataSet()
+        Me.RetiroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RetiroTableAdapter = New RegistroCTM.Registro_CTMDataSetTableAdapters.RetiroTableAdapter()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumeroDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MotoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmisionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RetiroDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MontoCajaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SaldoCajaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridRegistroRetiro, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Registro_CTMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RetiroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -365,13 +382,108 @@ Partial Class FormRetiros
         Me.DataGridRegistroRetiro.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridRegistroRetiro.AutoGenerateColumns = False
         Me.DataGridRegistroRetiro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridRegistroRetiro.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.DataGridRegistroRetiro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridRegistroRetiro.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.NumeroDataGridViewTextBoxColumn, Me.MotoDataGridViewTextBoxColumn, Me.EmisionDataGridViewTextBoxColumn, Me.RetiroDataGridViewTextBoxColumn, Me.MontoCajaDataGridViewTextBoxColumn, Me.SaldoCajaDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewCheckBoxColumn1})
+        Me.DataGridRegistroRetiro.DataSource = Me.RetiroBindingSource
         Me.DataGridRegistroRetiro.Location = New System.Drawing.Point(16, 438)
         Me.DataGridRegistroRetiro.Name = "DataGridRegistroRetiro"
+        Me.DataGridRegistroRetiro.ReadOnly = True
         Me.DataGridRegistroRetiro.Size = New System.Drawing.Size(1038, 69)
         Me.DataGridRegistroRetiro.TabIndex = 2
+        '
+        'Registro_CTMDataSet
+        '
+        Me.Registro_CTMDataSet.DataSetName = "Registro_CTMDataSet"
+        Me.Registro_CTMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RetiroBindingSource
+        '
+        Me.RetiroBindingSource.DataMember = "Retiro"
+        Me.RetiroBindingSource.DataSource = Me.Registro_CTMDataSet
+        '
+        'RetiroTableAdapter
+        '
+        Me.RetiroTableAdapter.ClearBeforeFill = True
+        '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NumeroDataGridViewTextBoxColumn
+        '
+        Me.NumeroDataGridViewTextBoxColumn.DataPropertyName = "Numero"
+        Me.NumeroDataGridViewTextBoxColumn.HeaderText = "Numero"
+        Me.NumeroDataGridViewTextBoxColumn.Name = "NumeroDataGridViewTextBoxColumn"
+        Me.NumeroDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MotoDataGridViewTextBoxColumn
+        '
+        Me.MotoDataGridViewTextBoxColumn.DataPropertyName = "Moto"
+        Me.MotoDataGridViewTextBoxColumn.HeaderText = "Moto"
+        Me.MotoDataGridViewTextBoxColumn.Name = "MotoDataGridViewTextBoxColumn"
+        Me.MotoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EmisionDataGridViewTextBoxColumn
+        '
+        Me.EmisionDataGridViewTextBoxColumn.DataPropertyName = "Emision"
+        Me.EmisionDataGridViewTextBoxColumn.HeaderText = "Emision"
+        Me.EmisionDataGridViewTextBoxColumn.Name = "EmisionDataGridViewTextBoxColumn"
+        Me.EmisionDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'RetiroDataGridViewTextBoxColumn
+        '
+        Me.RetiroDataGridViewTextBoxColumn.DataPropertyName = "Retiro"
+        Me.RetiroDataGridViewTextBoxColumn.HeaderText = "Retiro"
+        Me.RetiroDataGridViewTextBoxColumn.Name = "RetiroDataGridViewTextBoxColumn"
+        Me.RetiroDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MontoCajaDataGridViewTextBoxColumn
+        '
+        Me.MontoCajaDataGridViewTextBoxColumn.DataPropertyName = "Monto_Caja"
+        Me.MontoCajaDataGridViewTextBoxColumn.HeaderText = "Monto_Caja"
+        Me.MontoCajaDataGridViewTextBoxColumn.Name = "MontoCajaDataGridViewTextBoxColumn"
+        Me.MontoCajaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SaldoCajaDataGridViewTextBoxColumn
+        '
+        Me.SaldoCajaDataGridViewTextBoxColumn.DataPropertyName = "Saldo_Caja"
+        Me.SaldoCajaDataGridViewTextBoxColumn.HeaderText = "Saldo_Caja"
+        Me.SaldoCajaDataGridViewTextBoxColumn.Name = "SaldoCajaDataGridViewTextBoxColumn"
+        Me.SaldoCajaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Recibido"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Recibido"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Observacion"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Observacion"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewCheckBoxColumn1
+        '
+        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "Estado"
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "Estado"
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        Me.DataGridViewCheckBoxColumn1.ReadOnly = True
         '
         'FormRetiros
         '
@@ -389,6 +501,8 @@ Partial Class FormRetiros
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridRegistroRetiro, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Registro_CTMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RetiroBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -427,4 +541,18 @@ Partial Class FormRetiros
     Friend WithEvents RecibidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ObservacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EstadoDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents Registro_CTMDataSet As Registro_CTMDataSet
+    Friend WithEvents RetiroBindingSource As BindingSource
+    Friend WithEvents RetiroTableAdapter As Registro_CTMDataSetTableAdapters.RetiroTableAdapter
+    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NumeroDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MotoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmisionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RetiroDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MontoCajaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SaldoCajaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
 End Class

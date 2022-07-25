@@ -1,0 +1,236 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+RegistroCTM
+</name>
+</assembly>
+<members>
+<member name="T:RegistroCTM.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:RegistroCTM.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:RegistroCTM.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:RegistroCTM.My.Resources.Resources.fondo">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.MiembrosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.PagosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.RetiroDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.TipoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.TotalesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.Consulta_Historial_CortesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.Consulta_Historial_PagosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.Consulta_Historial_RetiroDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.MiembrosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.PagosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.RetiroRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.TipoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.TotalesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.Consulta_Historial_CortesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.Consulta_Historial_PagosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.Consulta_Historial_RetiroRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.MiembrosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.PagosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.RetiroRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.TipoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.TotalesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.Consulta_Historial_CortesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.Consulta_Historial_PagosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSet.Consulta_Historial_RetiroRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSetTableAdapters.MiembrosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSetTableAdapters.PagosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSetTableAdapters.RetiroTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSetTableAdapters.TipoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSetTableAdapters.TotalesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSetTableAdapters.Consulta_Historial_CortesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSetTableAdapters.Consulta_Historial_PagosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSetTableAdapters.Consulta_Historial_RetiroTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:RegistroCTM.Registro_CTMDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RegistroCTM.Registro_CTMDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:RegistroCTM.Registro_CTMDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RegistroCTM.Registro_CTMDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:RegistroCTM.Registro_CTMDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RegistroCTM.Registro_CTMDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:RegistroCTM.Registro_CTMDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:RegistroCTM.Registro_CTMDataSetTableAdapters.TableAdapterManager.UpdateAll(RegistroCTM.Registro_CTMDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:RegistroCTM.Registro_CTMDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

@@ -64,6 +64,17 @@ Namespace My
                 Return CType(Me("Registro_CTMConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=""|DataDirectory|\bin\Debug\Registro"& _ 
+            " CTM.accdb""")>  _
+        Public ReadOnly Property Registro_CTMConnection() As String
+            Get
+                Return CType(Me("Registro_CTMConnection"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
@@ -75,9 +86,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.WindowsApp1.My.MySettings
+        Friend ReadOnly Property Settings() As Global.RegistroCTM.My.MySettings
             Get
-                Return Global.WindowsApp1.My.MySettings.Default
+                Return Global.RegistroCTM.My.MySettings.Default
             End Get
         End Property
     End Module
