@@ -23,12 +23,12 @@ Partial Class FormPago
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPago))
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBoxpagps = New System.Windows.Forms.GroupBox()
+        Me.suma = New System.Windows.Forms.Button()
         Me.ButtonLimpiarPagos = New System.Windows.Forms.Button()
         Me.ButtonImprimirPagos = New System.Windows.Forms.Button()
         Me.ButtonGuardarPago = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -37,56 +37,68 @@ Partial Class FormPago
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextTipoMoto = New System.Windows.Forms.TextBox()
-        Me.TextNmeroMoto = New System.Windows.Forms.TextBox()
+        Me.TextObservacion = New System.Windows.Forms.TextBox()
         Me.TextRecibido = New System.Windows.Forms.TextBox()
         Me.TotalPago = New System.Windows.Forms.TextBox()
         Me.CuotaPago = New System.Windows.Forms.TextBox()
         Me.PagoAhorro = New System.Windows.Forms.TextBox()
         Me.DateTimeFechaActual = New System.Windows.Forms.DateTimePicker()
         Me.DateTimeConcepto = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBoxTipoMoto = New System.Windows.Forms.ComboBox()
         Me.ComboNombreCliente = New System.Windows.Forms.ComboBox()
-        Me.GroupBox1.SuspendLayout()
+        Me.GroupBoxpagps.SuspendLayout()
         Me.SuspendLayout()
         '
-        'GroupBox1
+        'GroupBoxpagps
         '
-        Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.GroupBoxpagps.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.GroupBox1.Controls.Add(Me.ButtonLimpiarPagos)
-        Me.GroupBox1.Controls.Add(Me.ButtonImprimirPagos)
-        Me.GroupBox1.Controls.Add(Me.ButtonGuardarPago)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextTipoMoto)
-        Me.GroupBox1.Controls.Add(Me.TextNmeroMoto)
-        Me.GroupBox1.Controls.Add(Me.TextRecibido)
-        Me.GroupBox1.Controls.Add(Me.TotalPago)
-        Me.GroupBox1.Controls.Add(Me.CuotaPago)
-        Me.GroupBox1.Controls.Add(Me.PagoAhorro)
-        Me.GroupBox1.Controls.Add(Me.DateTimeFechaActual)
-        Me.GroupBox1.Controls.Add(Me.DateTimeConcepto)
-        Me.GroupBox1.Controls.Add(Me.ComboNombreCliente)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 14)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(669, 420)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "ENTRADA DE DATOS"
+        Me.GroupBoxpagps.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.GroupBoxpagps.Controls.Add(Me.suma)
+        Me.GroupBoxpagps.Controls.Add(Me.ButtonLimpiarPagos)
+        Me.GroupBoxpagps.Controls.Add(Me.ButtonImprimirPagos)
+        Me.GroupBoxpagps.Controls.Add(Me.ButtonGuardarPago)
+        Me.GroupBoxpagps.Controls.Add(Me.Label3)
+        Me.GroupBoxpagps.Controls.Add(Me.Label9)
+        Me.GroupBoxpagps.Controls.Add(Me.Label10)
+        Me.GroupBoxpagps.Controls.Add(Me.Label1)
+        Me.GroupBoxpagps.Controls.Add(Me.Label8)
+        Me.GroupBoxpagps.Controls.Add(Me.Label7)
+        Me.GroupBoxpagps.Controls.Add(Me.Label6)
+        Me.GroupBoxpagps.Controls.Add(Me.Label5)
+        Me.GroupBoxpagps.Controls.Add(Me.Label4)
+        Me.GroupBoxpagps.Controls.Add(Me.TextObservacion)
+        Me.GroupBoxpagps.Controls.Add(Me.TextRecibido)
+        Me.GroupBoxpagps.Controls.Add(Me.TotalPago)
+        Me.GroupBoxpagps.Controls.Add(Me.CuotaPago)
+        Me.GroupBoxpagps.Controls.Add(Me.PagoAhorro)
+        Me.GroupBoxpagps.Controls.Add(Me.DateTimeFechaActual)
+        Me.GroupBoxpagps.Controls.Add(Me.DateTimeConcepto)
+        Me.GroupBoxpagps.Controls.Add(Me.ComboBoxTipoMoto)
+        Me.GroupBoxpagps.Controls.Add(Me.ComboNombreCliente)
+        Me.GroupBoxpagps.Location = New System.Drawing.Point(16, 14)
+        Me.GroupBoxpagps.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBoxpagps.Name = "GroupBoxpagps"
+        Me.GroupBoxpagps.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBoxpagps.Size = New System.Drawing.Size(669, 382)
+        Me.GroupBoxpagps.TabIndex = 0
+        Me.GroupBoxpagps.TabStop = False
+        Me.GroupBoxpagps.Text = "ENTRADA DE DATOS"
+        '
+        'suma
+        '
+        Me.suma.BackColor = System.Drawing.Color.Black
+        Me.suma.FlatAppearance.BorderColor = System.Drawing.Color.Red
+        Me.suma.FlatAppearance.BorderSize = 2
+        Me.suma.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.suma.ForeColor = System.Drawing.Color.White
+        Me.suma.Location = New System.Drawing.Point(346, 163)
+        Me.suma.Name = "suma"
+        Me.suma.Size = New System.Drawing.Size(27, 27)
+        Me.suma.TabIndex = 23
+        Me.suma.Text = "+"
+        Me.suma.UseVisualStyleBackColor = False
         '
         'ButtonLimpiarPagos
         '
@@ -96,7 +108,7 @@ Partial Class FormPago
         Me.ButtonLimpiarPagos.FlatAppearance.BorderSize = 2
         Me.ButtonLimpiarPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonLimpiarPagos.ForeColor = System.Drawing.Color.White
-        Me.ButtonLimpiarPagos.Location = New System.Drawing.Point(448, 360)
+        Me.ButtonLimpiarPagos.Location = New System.Drawing.Point(448, 322)
         Me.ButtonLimpiarPagos.Margin = New System.Windows.Forms.Padding(5, 3, 5, 3)
         Me.ButtonLimpiarPagos.Name = "ButtonLimpiarPagos"
         Me.ButtonLimpiarPagos.Size = New System.Drawing.Size(213, 38)
@@ -112,7 +124,7 @@ Partial Class FormPago
         Me.ButtonImprimirPagos.FlatAppearance.BorderSize = 2
         Me.ButtonImprimirPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonImprimirPagos.ForeColor = System.Drawing.Color.White
-        Me.ButtonImprimirPagos.Location = New System.Drawing.Point(230, 360)
+        Me.ButtonImprimirPagos.Location = New System.Drawing.Point(230, 322)
         Me.ButtonImprimirPagos.Margin = New System.Windows.Forms.Padding(5, 3, 5, 3)
         Me.ButtonImprimirPagos.Name = "ButtonImprimirPagos"
         Me.ButtonImprimirPagos.Size = New System.Drawing.Size(209, 38)
@@ -128,7 +140,7 @@ Partial Class FormPago
         Me.ButtonGuardarPago.FlatAppearance.BorderSize = 2
         Me.ButtonGuardarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonGuardarPago.ForeColor = System.Drawing.Color.White
-        Me.ButtonGuardarPago.Location = New System.Drawing.Point(8, 360)
+        Me.ButtonGuardarPago.Location = New System.Drawing.Point(8, 322)
         Me.ButtonGuardarPago.Margin = New System.Windows.Forms.Padding(5, 3, 5, 3)
         Me.ButtonGuardarPago.Name = "ButtonGuardarPago"
         Me.ButtonGuardarPago.Size = New System.Drawing.Size(213, 38)
@@ -142,25 +154,12 @@ Partial Class FormPago
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(81, 100)
+        Me.Label3.Location = New System.Drawing.Point(85, 68)
         Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(95, 15)
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Tipo De Moto:"
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(59, 69)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(119, 15)
-        Me.Label2.TabIndex = 18
-        Me.Label2.Text = "Numero De Moto:"
         '
         'Label9
         '
@@ -181,7 +180,7 @@ Partial Class FormPago
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(84, 313)
+        Me.Label10.Location = New System.Drawing.Point(84, 281)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(93, 15)
         Me.Label10.TabIndex = 3
@@ -193,7 +192,7 @@ Partial Class FormPago
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(109, 282)
+        Me.Label1.Location = New System.Drawing.Point(109, 250)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(68, 15)
         Me.Label1.TabIndex = 3
@@ -205,7 +204,7 @@ Partial Class FormPago
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(136, 251)
+        Me.Label8.Location = New System.Drawing.Point(136, 219)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(44, 15)
         Me.Label8.TabIndex = 3
@@ -217,7 +216,7 @@ Partial Class FormPago
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(130, 221)
+        Me.Label7.Location = New System.Drawing.Point(130, 189)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(50, 15)
         Me.Label7.TabIndex = 3
@@ -229,7 +228,7 @@ Partial Class FormPago
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(122, 195)
+        Me.Label6.Location = New System.Drawing.Point(122, 163)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(56, 15)
         Me.Label6.TabIndex = 3
@@ -241,7 +240,7 @@ Partial Class FormPago
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(80, 165)
+        Me.Label5.Location = New System.Drawing.Point(80, 133)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(96, 15)
         Me.Label5.TabIndex = 3
@@ -253,54 +252,30 @@ Partial Class FormPago
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(103, 135)
+        Me.Label4.Location = New System.Drawing.Point(106, 102)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(74, 15)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Concepto:"
         '
-        'TextBox2
+        'TextObservacion
         '
-        Me.TextBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.TextObservacion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Location = New System.Drawing.Point(207, 310)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(410, 23)
-        Me.TextBox2.TabIndex = 2
-        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TextTipoMoto
-        '
-        Me.TextTipoMoto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextTipoMoto.Location = New System.Drawing.Point(207, 97)
-        Me.TextTipoMoto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextTipoMoto.Name = "TextTipoMoto"
-        Me.TextTipoMoto.Size = New System.Drawing.Size(410, 23)
-        Me.TextTipoMoto.TabIndex = 2
-        Me.TextTipoMoto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TextNmeroMoto
-        '
-        Me.TextNmeroMoto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextNmeroMoto.Location = New System.Drawing.Point(207, 65)
-        Me.TextNmeroMoto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextNmeroMoto.Name = "TextNmeroMoto"
-        Me.TextNmeroMoto.Size = New System.Drawing.Size(410, 23)
-        Me.TextNmeroMoto.TabIndex = 2
-        Me.TextNmeroMoto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TextObservacion.Location = New System.Drawing.Point(207, 278)
+        Me.TextObservacion.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextObservacion.Name = "TextObservacion"
+        Me.TextObservacion.Size = New System.Drawing.Size(410, 23)
+        Me.TextObservacion.TabIndex = 2
+        Me.TextObservacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TextRecibido
         '
         Me.TextRecibido.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextRecibido.Location = New System.Drawing.Point(207, 279)
+        Me.TextRecibido.Location = New System.Drawing.Point(207, 247)
         Me.TextRecibido.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextRecibido.Name = "TextRecibido"
         Me.TextRecibido.Size = New System.Drawing.Size(410, 23)
@@ -312,7 +287,8 @@ Partial Class FormPago
         Me.TotalPago.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TotalPago.Location = New System.Drawing.Point(207, 248)
+        Me.TotalPago.Enabled = False
+        Me.TotalPago.Location = New System.Drawing.Point(207, 216)
         Me.TotalPago.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TotalPago.Name = "TotalPago"
         Me.TotalPago.ReadOnly = True
@@ -325,7 +301,7 @@ Partial Class FormPago
         Me.CuotaPago.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CuotaPago.Location = New System.Drawing.Point(207, 218)
+        Me.CuotaPago.Location = New System.Drawing.Point(207, 186)
         Me.CuotaPago.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CuotaPago.Name = "CuotaPago"
         Me.CuotaPago.Size = New System.Drawing.Size(122, 23)
@@ -337,7 +313,7 @@ Partial Class FormPago
         Me.PagoAhorro.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PagoAhorro.Location = New System.Drawing.Point(207, 188)
+        Me.PagoAhorro.Location = New System.Drawing.Point(207, 156)
         Me.PagoAhorro.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PagoAhorro.Name = "PagoAhorro"
         Me.PagoAhorro.Size = New System.Drawing.Size(122, 23)
@@ -350,7 +326,7 @@ Partial Class FormPago
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DateTimeFechaActual.Enabled = False
-        Me.DateTimeFechaActual.Location = New System.Drawing.Point(207, 158)
+        Me.DateTimeFechaActual.Location = New System.Drawing.Point(207, 126)
         Me.DateTimeFechaActual.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DateTimeFechaActual.Name = "DateTimeFechaActual"
         Me.DateTimeFechaActual.Size = New System.Drawing.Size(285, 23)
@@ -361,11 +337,25 @@ Partial Class FormPago
         Me.DateTimeConcepto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DateTimeConcepto.Location = New System.Drawing.Point(207, 128)
+        Me.DateTimeConcepto.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimeConcepto.Location = New System.Drawing.Point(207, 96)
         Me.DateTimeConcepto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DateTimeConcepto.Name = "DateTimeConcepto"
         Me.DateTimeConcepto.Size = New System.Drawing.Size(285, 23)
         Me.DateTimeConcepto.TabIndex = 1
+        Me.DateTimeConcepto.Value = New Date(2022, 7, 25, 0, 0, 0, 0)
+        '
+        'ComboBoxTipoMoto
+        '
+        Me.ComboBoxTipoMoto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ComboBoxTipoMoto.FormattingEnabled = True
+        Me.ComboBoxTipoMoto.Location = New System.Drawing.Point(207, 65)
+        Me.ComboBoxTipoMoto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ComboBoxTipoMoto.Name = "ComboBoxTipoMoto"
+        Me.ComboBoxTipoMoto.Size = New System.Drawing.Size(410, 23)
+        Me.ComboBoxTipoMoto.TabIndex = 0
         '
         'ComboNombreCliente
         '
@@ -384,20 +374,20 @@ Partial Class FormPago
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(698, 440)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(698, 402)
+        Me.Controls.Add(Me.GroupBoxpagps)
         Me.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FormPago"
         Me.Text = "REGISTRO DE PAGO"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.GroupBoxpagps.ResumeLayout(False)
+        Me.GroupBoxpagps.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GroupBoxpagps As GroupBox
     Friend WithEvents TotalPago As TextBox
     Friend WithEvents CuotaPago As TextBox
     Friend WithEvents PagoAhorro As TextBox
@@ -411,14 +401,13 @@ Partial Class FormPago
     Friend WithEvents Label4 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents ButtonLimpiarPagos As Button
     Friend WithEvents ButtonImprimirPagos As Button
     Friend WithEvents ButtonGuardarPago As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextObservacion As TextBox
     Friend WithEvents TextRecibido As TextBox
-    Friend WithEvents TextTipoMoto As TextBox
-    Friend WithEvents TextNmeroMoto As TextBox
+    Friend WithEvents ComboBoxTipoMoto As ComboBox
+    Friend WithEvents suma As Button
 End Class

@@ -27,8 +27,12 @@ Partial Class FormConsulta
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConsulta))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TimeBuscaFecha = New System.Windows.Forms.DateTimePicker()
         Me.ComboBuscaCliente = New System.Windows.Forms.ComboBox()
+        Me.ButtonBuscaFecha = New System.Windows.Forms.Button()
+        Me.ButtonEliminar = New System.Windows.Forms.Button()
         Me.ButtonHistorial = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -52,17 +56,30 @@ Partial Class FormConsulta
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.GroupBox1.Controls.Add(Me.TimeBuscaFecha)
         Me.GroupBox1.Controls.Add(Me.ComboBuscaCliente)
+        Me.GroupBox1.Controls.Add(Me.ButtonBuscaFecha)
+        Me.GroupBox1.Controls.Add(Me.ButtonEliminar)
         Me.GroupBox1.Controls.Add(Me.ButtonHistorial)
+        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(31, 20)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.GroupBox1.Size = New System.Drawing.Size(1191, 72)
+        Me.GroupBox1.Size = New System.Drawing.Size(1191, 124)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "BUSCAR MIEMBRO"
+        '
+        'TimeBuscaFecha
+        '
+        Me.TimeBuscaFecha.CustomFormat = ""
+        Me.TimeBuscaFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TimeBuscaFecha.Location = New System.Drawing.Point(238, 78)
+        Me.TimeBuscaFecha.Name = "TimeBuscaFecha"
+        Me.TimeBuscaFecha.Size = New System.Drawing.Size(351, 23)
+        Me.TimeBuscaFecha.TabIndex = 24
         '
         'ComboBuscaCliente
         '
@@ -72,6 +89,38 @@ Partial Class FormConsulta
         Me.ComboBuscaCliente.Name = "ComboBuscaCliente"
         Me.ComboBuscaCliente.Size = New System.Drawing.Size(592, 23)
         Me.ComboBuscaCliente.TabIndex = 23
+        '
+        'ButtonBuscaFecha
+        '
+        Me.ButtonBuscaFecha.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.ButtonBuscaFecha.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ButtonBuscaFecha.FlatAppearance.BorderColor = System.Drawing.Color.Red
+        Me.ButtonBuscaFecha.FlatAppearance.BorderSize = 2
+        Me.ButtonBuscaFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonBuscaFecha.ForeColor = System.Drawing.Color.White
+        Me.ButtonBuscaFecha.Location = New System.Drawing.Point(637, 72)
+        Me.ButtonBuscaFecha.Margin = New System.Windows.Forms.Padding(5, 3, 5, 3)
+        Me.ButtonBuscaFecha.Name = "ButtonBuscaFecha"
+        Me.ButtonBuscaFecha.Size = New System.Drawing.Size(171, 39)
+        Me.ButtonBuscaFecha.TabIndex = 22
+        Me.ButtonBuscaFecha.Text = "Busqueda Por Fecha"
+        Me.ButtonBuscaFecha.UseVisualStyleBackColor = False
+        '
+        'ButtonEliminar
+        '
+        Me.ButtonEliminar.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.ButtonEliminar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ButtonEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Red
+        Me.ButtonEliminar.FlatAppearance.BorderSize = 2
+        Me.ButtonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonEliminar.ForeColor = System.Drawing.Color.White
+        Me.ButtonEliminar.Location = New System.Drawing.Point(923, 72)
+        Me.ButtonEliminar.Margin = New System.Windows.Forms.Padding(5, 3, 5, 3)
+        Me.ButtonEliminar.Name = "ButtonEliminar"
+        Me.ButtonEliminar.Size = New System.Drawing.Size(171, 39)
+        Me.ButtonEliminar.TabIndex = 22
+        Me.ButtonEliminar.Text = "Eliminar Registro"
+        Me.ButtonEliminar.UseVisualStyleBackColor = False
         '
         'ButtonHistorial
         '
@@ -88,6 +137,16 @@ Partial Class FormConsulta
         Me.ButtonHistorial.TabIndex = 22
         Me.ButtonHistorial.Text = "Buscar Historial"
         Me.ButtonHistorial.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(179, 84)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(51, 15)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Fecha:"
         '
         'Label1
         '
@@ -114,7 +173,7 @@ Partial Class FormConsulta
         Me.GroupBox2.Controls.Add(Me.TextBuscaTipoMoto)
         Me.GroupBox2.Controls.Add(Me.TextBuscaNombreMiembro)
         Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Location = New System.Drawing.Point(31, 98)
+        Me.GroupBox2.Location = New System.Drawing.Point(31, 150)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -257,7 +316,6 @@ Partial Class FormConsulta
         'DataGridBusqueda
         '
         Me.DataGridBusqueda.AllowUserToAddRows = False
-        Me.DataGridBusqueda.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridBusqueda.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridBusqueda.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -282,11 +340,11 @@ Partial Class FormConsulta
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridBusqueda.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridBusqueda.Location = New System.Drawing.Point(31, 270)
+        Me.DataGridBusqueda.Location = New System.Drawing.Point(31, 307)
         Me.DataGridBusqueda.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.DataGridBusqueda.Name = "DataGridBusqueda"
         Me.DataGridBusqueda.ReadOnly = True
-        Me.DataGridBusqueda.Size = New System.Drawing.Size(1187, 300)
+        Me.DataGridBusqueda.Size = New System.Drawing.Size(1187, 263)
         Me.DataGridBusqueda.TabIndex = 2
         '
         'FormConsulta
@@ -340,4 +398,8 @@ Partial Class FormConsulta
     Friend WithEvents RecibidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ObservacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EstadoDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents TimeBuscaFecha As DateTimePicker
+    Friend WithEvents ButtonBuscaFecha As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents ButtonEliminar As Button
 End Class

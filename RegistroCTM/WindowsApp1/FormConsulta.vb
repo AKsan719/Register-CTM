@@ -4,10 +4,10 @@ Public Class FormConsulta
 
         conectar()
 
-        cadena_sql = "SELECT Miembros.Nombre, Tipo.Tipo, Pagos.concepto, Pagos.Ahorro, Pagos.Cuota, Pagos.Total, Pagos.[Fecha De Emision], Pagos.Observacion, Pagos.Estado
-                        FROM Miembros INNER JOIN (Tipo INNER JOIN Pagos ON Tipo.Id = Pagos.Moto) ON Miembros.Nombre = Pagos.Nombre
-                           WHERE (((Miembros.Miembro)= " & ComboBuscaCliente.SelectedValue & ") AND ((Pagos.Estado)=True))
-                               ORDER BY Pagos.[Fecha De Emision] DESC;"
+        cadena_sql = "SELECT Pagos.Id, Miembros.Nombre, Tipo.Tipo, Pagos.concepto, Pagos.Ahorro, Pagos.Cuota, Pagos.Total, Pagos.[Fecha De Emision], Pagos.Observacion, Pagos.Estado
+                        FROM (Tipo INNER JOIN Pagos ON Tipo.Id = Pagos.Moto) INNER JOIN Miembros ON Pagos.Nombre = Miembros.Miembro
+                            WHERE (((Miembros.Miembro)= " & ComboBuscaCliente.SelectedValue & ") AND ((Pagos.Estado)=True))
+                                ORDER BY Pagos.[Fecha De Emision] DESC;"
 
         Dim da_Histopagos As New OleDbDataAdapter(cadena_sql, conexion)
         Dim dt_Histopagos As New DataTable
@@ -76,4 +76,59 @@ Public Class FormConsulta
 
     End Sub
 
+    Private Sub ButtonBuscaFecha_Click(sender As Object, e As EventArgs) Handles ButtonBuscaFecha.Click
+
+        conectar()
+
+        cadena_sql = "SELECT Pagos.Id,Miembros.Nombre, Tipo.Tipo, Pagos.concepto, Pagos.Ahorro, Pagos.Cuota, Pagos.Total, Pagos.[Fecha De Emision], Pagos.Observacion, Pagos.Estado
+                         FROM (Tipo INNER JOIN Pagos ON Tipo.Id = Pagos.Moto) INNER JOIN Miembros ON Pagos.Nombre = Miembros.Miembro
+                           WHERE (((Pagos.concepto)=#" & TimeBuscaFecha.Text & "#) AND ((Pagos.Estado)=True))
+                               ORDER BY Miembros.Nombre DESC;"
+
+        Dim da_Histopagos As New OleDbDataAdapter(cadena_sql, conexion)
+        Dim dt_Histopagos As New DataTable
+
+        da_Histopagos.Fill(dt_Histopagos)
+        DataGridBusqueda.DataSource = dt_Histopagos
+
+        Dim TotalAhorro As Double = 0
+        Dim TotalCouta As Double = 0
+        Dim TotalTotal As Double = 0
+        Dim fila As DataGridViewRow = New DataGridViewRow()
+        For Each fila In DataGridBusqueda.Rows
+            TotalAhorro += Convert.ToDouble(fila.Cells("Ahorro").Value)
+            TotalCouta += Convert.ToDouble(fila.Cells("Cuota").Value)
+            TotalTotal += Convert.ToDouble(fila.Cells("Total").Value)
+        Next
+
+        BuscaTotalAhorro.Text = Convert.ToString(TotalAhorro)
+        BuscaTotalCuota.Text = Convert.ToString(TotalCouta)
+        BuscaTotalAporte.Text = Convert.ToString(TotalTotal)
+
+        conexion.Close()
+
+    End Sub
+
+    Private Sub ButtonEliminar_Click(sender As Object, e As EventArgs) Handles ButtonEliminar.Click
+
+        Dim v_id_Registro As String
+
+        conectar()
+
+        v_id_Registro = DataGridBusqueda.CurrentRow.Cells("Id").Value
+
+
+        cadena_sql = "UPDATE Pagos SET Estado = false WHERE Id = @p_Id;"
+
+        Dim comando As New OleDbCommand(cadena_sql, conexion)
+
+        comando.Parameters.AddWithValue("@p_Id", v_id_Registro)
+
+        comando.ExecuteNonQuery()
+
+        conexion.Close()
+
+        MsgBox("Registro eliminado con exito")
+
+    End Sub
 End Class

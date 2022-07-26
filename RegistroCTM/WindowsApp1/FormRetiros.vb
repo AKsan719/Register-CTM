@@ -20,4 +20,8 @@ Public Class FormRetiros
 
     End Sub
 
+    Private Sub ButtonLimpiar_Click(sender As Object, e As EventArgs) Handles ButtonLimpiar.Click
+        Dim limpiar As Limpiar = New Limpiar()
+        limpiar.LimpiarCasillas(Me, GroupBox1)
+    End Sub
 End Class
