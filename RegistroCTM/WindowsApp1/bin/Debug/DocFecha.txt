@@ -1,0 +1,18 @@
+﻿<o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;mso-yfti-lastrow:yes;height:33.5pt'>
+  <td width=147 style='width:110.55pt;border:none;border-bottom:solid #7F7F7F 1.0pt;
+  mso-border-bottom-themecolor:text1;mso-border-bottom-themetint:128;
+  mso-border-bottom-alt:solid #7F7F7F .5pt;mso-border-bottom-themecolor:text1;
+  mso-border-bottom-themetint:128;padding:0cm 5.4pt 0cm 5.4pt;height:33.5pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;
+  line-height:normal;mso-yfti-cnfc:4'><b><span style='font-family:"Arial",sans-serif'>Fecha
+  De Emisi�n:<o:p></o:p></span></b></p>
+  </td>
+  <td width=406 style='width:304.4pt;border:none;border-bottom:solid #7F7F7F 1.0pt;
+  mso-border-bottom-themecolor:text1;mso-border-bottom-themetint:128;
+  mso-border-bottom-alt:solid #7F7F7F .5pt;mso-border-bottom-themecolor:text1;
+  mso-border-bottom-themetint:128;padding:0cm 5.4pt 0cm 5.4pt;height:33.5pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;
+  line-height:normal'><span style='font-family:"Arial",sans-serif'>

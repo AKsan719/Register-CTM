@@ -46,6 +46,9 @@ Partial Class FormPago
         Me.DateTimeConcepto = New System.Windows.Forms.DateTimePicker()
         Me.ComboBoxTipoMoto = New System.Windows.Forms.ComboBox()
         Me.ComboNombreCliente = New System.Windows.Forms.ComboBox()
+        Me.TextGuardaCliente = New System.Windows.Forms.TextBox()
+        Me.TextGuardaTipo = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBoxpagps.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -72,6 +75,8 @@ Partial Class FormPago
         Me.GroupBoxpagps.Controls.Add(Me.TextRecibido)
         Me.GroupBoxpagps.Controls.Add(Me.TotalPago)
         Me.GroupBoxpagps.Controls.Add(Me.CuotaPago)
+        Me.GroupBoxpagps.Controls.Add(Me.TextGuardaTipo)
+        Me.GroupBoxpagps.Controls.Add(Me.TextGuardaCliente)
         Me.GroupBoxpagps.Controls.Add(Me.PagoAhorro)
         Me.GroupBoxpagps.Controls.Add(Me.DateTimeFechaActual)
         Me.GroupBoxpagps.Controls.Add(Me.DateTimeConcepto)
@@ -81,7 +86,7 @@ Partial Class FormPago
         Me.GroupBoxpagps.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBoxpagps.Name = "GroupBoxpagps"
         Me.GroupBoxpagps.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBoxpagps.Size = New System.Drawing.Size(669, 382)
+        Me.GroupBoxpagps.Size = New System.Drawing.Size(669, 383)
         Me.GroupBoxpagps.TabIndex = 0
         Me.GroupBoxpagps.TabStop = False
         Me.GroupBoxpagps.Text = "ENTRADA DE DATOS"
@@ -108,7 +113,7 @@ Partial Class FormPago
         Me.ButtonLimpiarPagos.FlatAppearance.BorderSize = 2
         Me.ButtonLimpiarPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonLimpiarPagos.ForeColor = System.Drawing.Color.White
-        Me.ButtonLimpiarPagos.Location = New System.Drawing.Point(448, 322)
+        Me.ButtonLimpiarPagos.Location = New System.Drawing.Point(448, 323)
         Me.ButtonLimpiarPagos.Margin = New System.Windows.Forms.Padding(5, 3, 5, 3)
         Me.ButtonLimpiarPagos.Name = "ButtonLimpiarPagos"
         Me.ButtonLimpiarPagos.Size = New System.Drawing.Size(213, 38)
@@ -124,7 +129,7 @@ Partial Class FormPago
         Me.ButtonImprimirPagos.FlatAppearance.BorderSize = 2
         Me.ButtonImprimirPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonImprimirPagos.ForeColor = System.Drawing.Color.White
-        Me.ButtonImprimirPagos.Location = New System.Drawing.Point(230, 322)
+        Me.ButtonImprimirPagos.Location = New System.Drawing.Point(230, 323)
         Me.ButtonImprimirPagos.Margin = New System.Windows.Forms.Padding(5, 3, 5, 3)
         Me.ButtonImprimirPagos.Name = "ButtonImprimirPagos"
         Me.ButtonImprimirPagos.Size = New System.Drawing.Size(209, 38)
@@ -140,7 +145,7 @@ Partial Class FormPago
         Me.ButtonGuardarPago.FlatAppearance.BorderSize = 2
         Me.ButtonGuardarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonGuardarPago.ForeColor = System.Drawing.Color.White
-        Me.ButtonGuardarPago.Location = New System.Drawing.Point(8, 322)
+        Me.ButtonGuardarPago.Location = New System.Drawing.Point(8, 323)
         Me.ButtonGuardarPago.Margin = New System.Windows.Forms.Padding(5, 3, 5, 3)
         Me.ButtonGuardarPago.Name = "ButtonGuardarPago"
         Me.ButtonGuardarPago.Size = New System.Drawing.Size(213, 38)
@@ -369,12 +374,58 @@ Partial Class FormPago
         Me.ComboNombreCliente.Size = New System.Drawing.Size(410, 23)
         Me.ComboNombreCliente.TabIndex = 0
         '
+        'TextGuardaCliente
+        '
+        Me.TextGuardaCliente.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextGuardaCliente.Enabled = False
+        Me.TextGuardaCliente.Location = New System.Drawing.Point(510, 96)
+        Me.TextGuardaCliente.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextGuardaCliente.Name = "TextGuardaCliente"
+        Me.TextGuardaCliente.ReadOnly = True
+        Me.TextGuardaCliente.Size = New System.Drawing.Size(107, 23)
+        Me.TextGuardaCliente.TabIndex = 2
+        Me.TextGuardaCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TextGuardaCliente.Visible = False
+        '
+        'TextGuardaTipo
+        '
+        Me.TextGuardaTipo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextGuardaTipo.Enabled = False
+        Me.TextGuardaTipo.Location = New System.Drawing.Point(510, 125)
+        Me.TextGuardaTipo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextGuardaTipo.Name = "TextGuardaTipo"
+        Me.TextGuardaTipo.ReadOnly = True
+        Me.TextGuardaTipo.Size = New System.Drawing.Size(107, 23)
+        Me.TextGuardaTipo.TabIndex = 2
+        Me.TextGuardaTipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TextGuardaTipo.Visible = False
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Black
+        Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Location = New System.Drawing.Point(476, 395)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(222, 14)
+        Me.Label2.TabIndex = 23
+        Me.Label2.Text = "© LOK Corporation. All rights reserved, 2022"
+        '
         'FormPago
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(698, 402)
+        Me.ClientSize = New System.Drawing.Size(698, 410)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.GroupBoxpagps)
         Me.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -384,6 +435,7 @@ Partial Class FormPago
         Me.GroupBoxpagps.ResumeLayout(False)
         Me.GroupBoxpagps.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -410,4 +462,7 @@ Partial Class FormPago
     Friend WithEvents TextRecibido As TextBox
     Friend WithEvents ComboBoxTipoMoto As ComboBox
     Friend WithEvents suma As Button
+    Friend WithEvents TextGuardaTipo As TextBox
+    Friend WithEvents TextGuardaCliente As TextBox
+    Friend WithEvents Label2 As Label
 End Class

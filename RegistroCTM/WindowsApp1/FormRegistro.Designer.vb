@@ -29,20 +29,21 @@ Partial Class FormRegistro
         Me.DataGridRegistro = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ComboTipoMoto = New System.Windows.Forms.ComboBox()
+        Me.MiembrosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Registro_CTMDataSet = New RegistroCTM.Registro_CTMDataSet()
         Me.ButtonVisualizar = New System.Windows.Forms.Button()
         Me.ButtonEliminar = New System.Windows.Forms.Button()
         Me.ButtonGuardar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextNombreMiembro = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Registro_CTMDataSet = New RegistroCTM.Registro_CTMDataSet()
-        Me.MiembrosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MiembrosTableAdapter = New RegistroCTM.Registro_CTMDataSetTableAdapters.MiembrosTableAdapter()
         Me.TableAdapterManager = New RegistroCTM.Registro_CTMDataSetTableAdapters.TableAdapterManager()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.DataGridRegistro, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.Registro_CTMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MiembrosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Registro_CTMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridRegistro
@@ -105,6 +106,16 @@ Partial Class FormRegistro
         Me.ComboTipoMoto.Name = "ComboTipoMoto"
         Me.ComboTipoMoto.Size = New System.Drawing.Size(514, 23)
         Me.ComboTipoMoto.TabIndex = 22
+        '
+        'MiembrosBindingSource
+        '
+        Me.MiembrosBindingSource.DataMember = "Miembros"
+        Me.MiembrosBindingSource.DataSource = Me.Registro_CTMDataSet
+        '
+        'Registro_CTMDataSet
+        '
+        Me.Registro_CTMDataSet.DataSetName = "Registro_CTMDataSet"
+        Me.Registro_CTMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ButtonVisualizar
         '
@@ -194,16 +205,6 @@ Partial Class FormRegistro
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Nombres Del Cliente:"
         '
-        'Registro_CTMDataSet
-        '
-        Me.Registro_CTMDataSet.DataSetName = "Registro_CTMDataSet"
-        Me.Registro_CTMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MiembrosBindingSource
-        '
-        Me.MiembrosBindingSource.DataMember = "Miembros"
-        Me.MiembrosBindingSource.DataSource = Me.Registro_CTMDataSet
-        '
         'MiembrosTableAdapter
         '
         Me.MiembrosTableAdapter.ClearBeforeFill = True
@@ -218,12 +219,28 @@ Partial Class FormRegistro
         Me.TableAdapterManager.TotalesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = RegistroCTM.Registro_CTMDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Black
+        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(844, 509)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(222, 14)
+        Me.Label4.TabIndex = 25
+        Me.Label4.Text = "© LOK Corporation. All rights reserved, 2022"
+        '
         'FormRegistro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1067, 519)
+        Me.ClientSize = New System.Drawing.Size(1067, 523)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DataGridRegistro)
         Me.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -235,9 +252,10 @@ Partial Class FormRegistro
         CType(Me.DataGridRegistro, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.Registro_CTMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MiembrosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Registro_CTMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents DataGridRegistro As DataGridView
@@ -253,4 +271,5 @@ Partial Class FormRegistro
     Friend WithEvents MiembrosBindingSource As BindingSource
     Friend WithEvents MiembrosTableAdapter As Registro_CTMDataSetTableAdapters.MiembrosTableAdapter
     Friend WithEvents TableAdapterManager As Registro_CTMDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Label4 As Label
 End Class

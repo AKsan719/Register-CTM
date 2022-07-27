@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormPrincipal
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,14 @@ Partial Class FormPrincipal
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPrincipal))
         Me.ButtonRegistro = New System.Windows.Forms.Button()
         Me.ButtonConsulta = New System.Windows.Forms.Button()
         Me.ButtonPagos = New System.Windows.Forms.Button()
-        Me.ButtonRetiro = New System.Windows.Forms.Button()
         Me.ButtonTotales = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ButtonRegistro
@@ -48,14 +48,14 @@ Partial Class FormPrincipal
         '
         'ButtonConsulta
         '
-        Me.ButtonConsulta.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.ButtonConsulta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonConsulta.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ButtonConsulta.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.ButtonConsulta.FlatAppearance.BorderSize = 2
         Me.ButtonConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonConsulta.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonConsulta.ForeColor = System.Drawing.Color.White
-        Me.ButtonConsulta.Location = New System.Drawing.Point(37, 116)
+        Me.ButtonConsulta.Location = New System.Drawing.Point(37, 181)
         Me.ButtonConsulta.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ButtonConsulta.Name = "ButtonConsulta"
         Me.ButtonConsulta.Size = New System.Drawing.Size(166, 40)
@@ -73,7 +73,7 @@ Partial Class FormPrincipal
         Me.ButtonPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonPagos.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonPagos.ForeColor = System.Drawing.Color.White
-        Me.ButtonPagos.Location = New System.Drawing.Point(298, 53)
+        Me.ButtonPagos.Location = New System.Drawing.Point(333, 53)
         Me.ButtonPagos.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ButtonPagos.Name = "ButtonPagos"
         Me.ButtonPagos.Size = New System.Drawing.Size(166, 40)
@@ -81,33 +81,16 @@ Partial Class FormPrincipal
         Me.ButtonPagos.Text = "Pagos"
         Me.ButtonPagos.UseVisualStyleBackColor = False
         '
-        'ButtonRetiro
-        '
-        Me.ButtonRetiro.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.ButtonRetiro.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ButtonRetiro.FlatAppearance.BorderColor = System.Drawing.Color.Red
-        Me.ButtonRetiro.FlatAppearance.BorderSize = 2
-        Me.ButtonRetiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonRetiro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonRetiro.ForeColor = System.Drawing.Color.White
-        Me.ButtonRetiro.Location = New System.Drawing.Point(298, 116)
-        Me.ButtonRetiro.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.ButtonRetiro.Name = "ButtonRetiro"
-        Me.ButtonRetiro.Size = New System.Drawing.Size(166, 40)
-        Me.ButtonRetiro.TabIndex = 1
-        Me.ButtonRetiro.Text = "Retiros"
-        Me.ButtonRetiro.UseVisualStyleBackColor = False
-        '
         'ButtonTotales
         '
-        Me.ButtonTotales.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.ButtonTotales.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ButtonTotales.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ButtonTotales.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.ButtonTotales.FlatAppearance.BorderSize = 2
         Me.ButtonTotales.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonTotales.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonTotales.ForeColor = System.Drawing.Color.White
-        Me.ButtonTotales.Location = New System.Drawing.Point(167, 185)
+        Me.ButtonTotales.Location = New System.Drawing.Point(333, 181)
         Me.ButtonTotales.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ButtonTotales.Name = "ButtonTotales"
         Me.ButtonTotales.Size = New System.Drawing.Size(166, 40)
@@ -115,16 +98,31 @@ Partial Class FormPrincipal
         Me.ButtonTotales.Text = "Totales En Caja"
         Me.ButtonTotales.UseVisualStyleBackColor = False
         '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Black
+        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(315, 254)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(222, 14)
+        Me.Label4.TabIndex = 22
+        Me.Label4.Text = "© LOK Corporation. All rights reserved, 2022"
+        '
         'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.RegistroCTM.My.Resources.Resources.fondo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(503, 269)
+        Me.ClientSize = New System.Drawing.Size(538, 269)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.ButtonPagos)
         Me.Controls.Add(Me.ButtonTotales)
-        Me.Controls.Add(Me.ButtonRetiro)
         Me.Controls.Add(Me.ButtonConsulta)
         Me.Controls.Add(Me.ButtonRegistro)
         Me.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -133,12 +131,13 @@ Partial Class FormPrincipal
         Me.Name = "FormPrincipal"
         Me.Text = "REGISTRO CTM"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents ButtonRegistro As Button
     Friend WithEvents ButtonConsulta As Button
     Friend WithEvents ButtonPagos As Button
-    Friend WithEvents ButtonRetiro As Button
     Friend WithEvents ButtonTotales As Button
+    Friend WithEvents Label4 As Label
 End Class

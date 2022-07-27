@@ -46,6 +46,7 @@ Partial Class FormConsulta
         Me.TextBuscaNombreMiembro = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridBusqueda = New System.Windows.Forms.DataGridView()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridBusqueda, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -347,12 +348,28 @@ Partial Class FormConsulta
         Me.DataGridBusqueda.Size = New System.Drawing.Size(1187, 263)
         Me.DataGridBusqueda.TabIndex = 2
         '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Black
+        Me.Label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label5.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Location = New System.Drawing.Point(1026, 573)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(222, 14)
+        Me.Label5.TabIndex = 23
+        Me.Label5.Text = "© LOK Corporation. All rights reserved, 2022"
+        '
         'FormConsulta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.ClientSize = New System.Drawing.Size(1248, 587)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.DataGridBusqueda)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -367,6 +384,7 @@ Partial Class FormConsulta
         Me.GroupBox2.PerformLayout()
         CType(Me.DataGridBusqueda, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -402,4 +420,5 @@ Partial Class FormConsulta
     Friend WithEvents ButtonBuscaFecha As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents ButtonEliminar As Button
+    Friend WithEvents Label5 As Label
 End Class

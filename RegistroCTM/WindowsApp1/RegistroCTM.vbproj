@@ -54,6 +54,11 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -105,12 +110,6 @@
     <Compile Include="FormRegistro.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRetiros.Designer.vb">
-      <DependentUpon>FormRetiros.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormRetiros.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormTotales.Designer.vb">
       <DependentUpon>FormTotales.vb</DependentUpon>
     </Compile>
@@ -152,9 +151,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistro.resx">
       <DependentUpon>FormRegistro.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormRetiros.resx">
-      <DependentUpon>FormRetiros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTotales.resx">
       <DependentUpon>FormTotales.vb</DependentUpon>

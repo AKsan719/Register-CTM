@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormTotales
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,8 @@ Partial Class FormTotales
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -30,28 +29,19 @@ Partial Class FormTotales
         Me.DataGridCorte = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DateTimeTotal = New System.Windows.Forms.DateTimePicker()
+        Me.ButtonMostrar = New System.Windows.Forms.Button()
         Me.ButtonHistorialCorte = New System.Windows.Forms.Button()
         Me.ButtonGuardar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.BuscaTotalCaja = New System.Windows.Forms.TextBox()
         Me.BuscaTotalGeneralCuota = New System.Windows.Forms.TextBox()
+        Me.BuscaTotal = New System.Windows.Forms.TextBox()
         Me.BuscaTotalGeneralAhorro = New System.Windows.Forms.TextBox()
-        Me.Registro_CTMDataSet = New RegistroCTM.Registro_CTMDataSet()
-        Me.TotalesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TotalesTableAdapter = New RegistroCTM.Registro_CTMDataSetTableAdapters.TotalesTableAdapter()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TotalAhorroDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TotalCuotaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CorteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.DataGridCorte, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.Registro_CTMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TotalesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridCorte
@@ -60,7 +50,6 @@ Partial Class FormTotales
         Me.DataGridCorte.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridCorte.AutoGenerateColumns = False
         Me.DataGridCorte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridCorte.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
@@ -72,8 +61,6 @@ Partial Class FormTotales
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridCorte.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridCorte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridCorte.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.TotalAhorroDataGridViewTextBoxColumn, Me.TotalCuotaDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn1, Me.CorteDataGridViewTextBoxColumn, Me.DataGridViewCheckBoxColumn1})
-        Me.DataGridCorte.DataSource = Me.TotalesBindingSource
         Me.DataGridCorte.Location = New System.Drawing.Point(13, 234)
         Me.DataGridCorte.Name = "DataGridCorte"
         Me.DataGridCorte.ReadOnly = True
@@ -87,7 +74,7 @@ Partial Class FormTotales
         Me.DataGridCorte.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridCorte.RowsDefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridCorte.Size = New System.Drawing.Size(552, 165)
+        Me.DataGridCorte.Size = New System.Drawing.Size(813, 170)
         Me.DataGridCorte.TabIndex = 40
         '
         'GroupBox1
@@ -96,20 +83,21 @@ Partial Class FormTotales
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.GrayText
         Me.GroupBox1.Controls.Add(Me.DateTimeTotal)
+        Me.GroupBox1.Controls.Add(Me.ButtonMostrar)
         Me.GroupBox1.Controls.Add(Me.ButtonHistorialCorte)
         Me.GroupBox1.Controls.Add(Me.ButtonGuardar)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.BuscaTotalCaja)
         Me.GroupBox1.Controls.Add(Me.BuscaTotalGeneralCuota)
+        Me.GroupBox1.Controls.Add(Me.BuscaTotal)
         Me.GroupBox1.Controls.Add(Me.BuscaTotalGeneralAhorro)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 12)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.GroupBox1.Size = New System.Drawing.Size(551, 216)
+        Me.GroupBox1.Size = New System.Drawing.Size(812, 216)
         Me.GroupBox1.TabIndex = 39
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "DATOS DE CAJA"
@@ -119,11 +107,26 @@ Partial Class FormTotales
         Me.DateTimeTotal.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DateTimeTotal.Enabled = False
         Me.DateTimeTotal.Location = New System.Drawing.Point(204, 115)
         Me.DateTimeTotal.Name = "DateTimeTotal"
-        Me.DateTimeTotal.Size = New System.Drawing.Size(328, 23)
+        Me.DateTimeTotal.Size = New System.Drawing.Size(589, 23)
         Me.DateTimeTotal.TabIndex = 38
+        '
+        'ButtonMostrar
+        '
+        Me.ButtonMostrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.ButtonMostrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ButtonMostrar.FlatAppearance.BorderColor = System.Drawing.Color.Red
+        Me.ButtonMostrar.FlatAppearance.BorderSize = 2
+        Me.ButtonMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonMostrar.ForeColor = System.Drawing.Color.White
+        Me.ButtonMostrar.Location = New System.Drawing.Point(315, 160)
+        Me.ButtonMostrar.Margin = New System.Windows.Forms.Padding(5, 3, 5, 3)
+        Me.ButtonMostrar.Name = "ButtonMostrar"
+        Me.ButtonMostrar.Size = New System.Drawing.Size(171, 39)
+        Me.ButtonMostrar.TabIndex = 37
+        Me.ButtonMostrar.Text = "Mostrar Totales"
+        Me.ButtonMostrar.UseVisualStyleBackColor = False
         '
         'ButtonHistorialCorte
         '
@@ -133,7 +136,7 @@ Partial Class FormTotales
         Me.ButtonHistorialCorte.FlatAppearance.BorderSize = 2
         Me.ButtonHistorialCorte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonHistorialCorte.ForeColor = System.Drawing.Color.White
-        Me.ButtonHistorialCorte.Location = New System.Drawing.Point(349, 160)
+        Me.ButtonHistorialCorte.Location = New System.Drawing.Point(610, 160)
         Me.ButtonHistorialCorte.Margin = New System.Windows.Forms.Padding(5, 3, 5, 3)
         Me.ButtonHistorialCorte.Name = "ButtonHistorialCorte"
         Me.ButtonHistorialCorte.Size = New System.Drawing.Size(171, 39)
@@ -209,20 +212,6 @@ Partial Class FormTotales
         Me.Label6.TabIndex = 36
         Me.Label6.Text = "Total General De Ahorro:"
         '
-        'BuscaTotalCaja
-        '
-        Me.BuscaTotalCaja.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BuscaTotalCaja.Enabled = False
-        Me.BuscaTotalCaja.Location = New System.Drawing.Point(204, 84)
-        Me.BuscaTotalCaja.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.BuscaTotalCaja.Name = "BuscaTotalCaja"
-        Me.BuscaTotalCaja.ReadOnly = True
-        Me.BuscaTotalCaja.Size = New System.Drawing.Size(328, 23)
-        Me.BuscaTotalCaja.TabIndex = 31
-        Me.BuscaTotalCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'BuscaTotalGeneralCuota
         '
         Me.BuscaTotalGeneralCuota.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -233,9 +222,23 @@ Partial Class FormTotales
         Me.BuscaTotalGeneralCuota.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BuscaTotalGeneralCuota.Name = "BuscaTotalGeneralCuota"
         Me.BuscaTotalGeneralCuota.ReadOnly = True
-        Me.BuscaTotalGeneralCuota.Size = New System.Drawing.Size(328, 23)
-        Me.BuscaTotalGeneralCuota.TabIndex = 32
+        Me.BuscaTotalGeneralCuota.Size = New System.Drawing.Size(589, 23)
+        Me.BuscaTotalGeneralCuota.TabIndex = 33
         Me.BuscaTotalGeneralCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'BuscaTotal
+        '
+        Me.BuscaTotal.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BuscaTotal.Enabled = False
+        Me.BuscaTotal.Location = New System.Drawing.Point(204, 84)
+        Me.BuscaTotal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BuscaTotal.Name = "BuscaTotal"
+        Me.BuscaTotal.ReadOnly = True
+        Me.BuscaTotal.Size = New System.Drawing.Size(589, 23)
+        Me.BuscaTotal.TabIndex = 33
+        Me.BuscaTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BuscaTotalGeneralAhorro
         '
@@ -247,72 +250,32 @@ Partial Class FormTotales
         Me.BuscaTotalGeneralAhorro.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BuscaTotalGeneralAhorro.Name = "BuscaTotalGeneralAhorro"
         Me.BuscaTotalGeneralAhorro.ReadOnly = True
-        Me.BuscaTotalGeneralAhorro.Size = New System.Drawing.Size(328, 23)
+        Me.BuscaTotalGeneralAhorro.Size = New System.Drawing.Size(589, 23)
         Me.BuscaTotalGeneralAhorro.TabIndex = 33
         Me.BuscaTotalGeneralAhorro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Registro_CTMDataSet
+        'Label4
         '
-        Me.Registro_CTMDataSet.DataSetName = "Registro_CTMDataSet"
-        Me.Registro_CTMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TotalesBindingSource
-        '
-        Me.TotalesBindingSource.DataMember = "Totales"
-        Me.TotalesBindingSource.DataSource = Me.Registro_CTMDataSet
-        '
-        'TotalesTableAdapter
-        '
-        Me.TotalesTableAdapter.ClearBeforeFill = True
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TotalAhorroDataGridViewTextBoxColumn
-        '
-        Me.TotalAhorroDataGridViewTextBoxColumn.DataPropertyName = "Total_Ahorro"
-        Me.TotalAhorroDataGridViewTextBoxColumn.HeaderText = "Total_Ahorro"
-        Me.TotalAhorroDataGridViewTextBoxColumn.Name = "TotalAhorroDataGridViewTextBoxColumn"
-        Me.TotalAhorroDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TotalCuotaDataGridViewTextBoxColumn
-        '
-        Me.TotalCuotaDataGridViewTextBoxColumn.DataPropertyName = "Total_Cuota"
-        Me.TotalCuotaDataGridViewTextBoxColumn.HeaderText = "Total_Cuota"
-        Me.TotalCuotaDataGridViewTextBoxColumn.Name = "TotalCuotaDataGridViewTextBoxColumn"
-        Me.TotalCuotaDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Total_Caja"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Total_Caja"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'CorteDataGridViewTextBoxColumn
-        '
-        Me.CorteDataGridViewTextBoxColumn.DataPropertyName = "Corte"
-        Me.CorteDataGridViewTextBoxColumn.HeaderText = "Corte"
-        Me.CorteDataGridViewTextBoxColumn.Name = "CorteDataGridViewTextBoxColumn"
-        Me.CorteDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DataGridViewCheckBoxColumn1
-        '
-        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "Estado"
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "Estado"
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-        Me.DataGridViewCheckBoxColumn1.ReadOnly = True
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Black
+        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(616, 406)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(222, 14)
+        Me.Label4.TabIndex = 41
+        Me.Label4.Text = "© LOK Corporation. All rights reserved, 2022"
         '
         'FormTotales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(577, 411)
+        Me.ClientSize = New System.Drawing.Size(838, 420)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.DataGridCorte)
         Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -323,9 +286,8 @@ Partial Class FormTotales
         CType(Me.DataGridCorte, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.Registro_CTMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TotalesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -338,8 +300,6 @@ Partial Class FormTotales
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents BuscaTotalCaja As TextBox
-    Friend WithEvents BuscaTotalGeneralCuota As TextBox
     Friend WithEvents BuscaTotalGeneralAhorro As TextBox
     Friend WithEvents IdCorteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TotalGeneralAhorroDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -347,13 +307,8 @@ Partial Class FormTotales
     Friend WithEvents TotalCajaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FechaDeCorteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EstadoDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
-    Friend WithEvents Registro_CTMDataSet As Registro_CTMDataSet
-    Friend WithEvents TotalesBindingSource As BindingSource
-    Friend WithEvents TotalesTableAdapter As Registro_CTMDataSetTableAdapters.TotalesTableAdapter
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TotalAhorroDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TotalCuotaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents CorteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
+    Friend WithEvents ButtonMostrar As Button
+    Friend WithEvents BuscaTotalGeneralCuota As TextBox
+    Friend WithEvents BuscaTotal As TextBox
+    Friend WithEvents Label4 As Label
 End Class

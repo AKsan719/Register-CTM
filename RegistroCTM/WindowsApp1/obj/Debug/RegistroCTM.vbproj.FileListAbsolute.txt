@@ -5,7 +5,6 @@ C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\RegistroCTM.FormConsu
 C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\RegistroCTM.FormPago.resources
 C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\RegistroCTM.FormPrincipal.resources
 C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\RegistroCTM.FormRegistro.resources
-C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\RegistroCTM.FormRetiros.resources
 C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\RegistroCTM.FormTotales.resources
 C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\obj\Debug\RegistroCTM.Resources.resources
 C:\Users\123\Desktop\CTM\RegistroCTM\WindowsApp1\bin\Debug\RegistroCTM.exe.config

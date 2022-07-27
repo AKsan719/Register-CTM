@@ -14,11 +14,6 @@
         pagos.Show()
     End Sub
 
-    Private Sub ButtonRetiro_Click(sender As Object, e As EventArgs) Handles ButtonRetiro.Click
-        Dim retiro = New FormRetiros()
-        retiro.Show()
-    End Sub
-
     Private Sub ButtonTotales_Click(sender As Object, e As EventArgs) Handles ButtonTotales.Click
         Dim total = New FormTotales()
         total.Show()
