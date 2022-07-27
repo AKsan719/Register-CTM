@@ -1,0 +1,22 @@
+# Register CTM
+
+ > Registro de aportes de los integrantes de una compañia de mototaxi
+
+# Requisitos previos
+
+ > Tener instalado la version de 32 bits de Office 365 o del 2015 en adelante
+
+ > Tener instalado el motor de base de datos de Microsoft Access puede descargarlo de la base de datos
+	o obteenrlos del siguiente link: (instalar de preferencia el del 2007) https://www.dropbox.com/sh/vmzo66p6k8ipo71/AAB0PGhZd1HYiRAm8ybNm7k4a?dl=0
+
+# Instalacion
+
+ > Segir los pasos del instalador "CTM"
+
+# Errores
+
+ > si surge algun error llamar a soporte
+
+# Propiedad intelectual
+ 
+ > ©LOK Corporation. All rights reserved, 2022

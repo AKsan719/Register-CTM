@@ -949,16 +949,16 @@ table.MsoTable15Plain2OddRow
 <div class=WordSection1>
 
 <p class=MsoNormal align=center style='text-align:center'><b><span
-style='font-size:16.0pt;line-height:107%;font-family:"Arial",sans-serif'>COMPA��A
+style='font-size:16.0pt;line-height:107%;font-family:"Arial",sans-serif'>COMPA&Ntilde;&Iacute;A
 DE TRANSPORTE EN MOTOTAXI<o:p></o:p></span></b></p>
 
 <p class=MsoNormal align=center style='text-align:center'><b><span
-style='font-size:16.0pt;line-height:107%;font-family:"Arial",sans-serif'>�MOTO
-CHAMANGA S.A.�<o:p></o:p></span></b></p>
+style='font-size:16.0pt;line-height:107%;font-family:"Arial",sans-serif'>&quot;MOTO
+CHAMANGA S.A.&quot;<o:p></o:p></span></b></p>
 
 <p class=MsoNormal align=center style='text-align:center'><b><span
 style='font-size:16.0pt;line-height:107%;font-family:"Arial",sans-serif'>Esmeraldas-Muisne-San
-Jos� De Chamanga.<o:p></o:p></span></b></p>
+Jos&eacute; De Chamanga.<o:p></o:p></span></b></p>
 
 <p class=MsoNormal><b><span style='font-size:14.0pt;line-height:107%;
 font-family:"Arial",sans-serif;mso-no-proof:yes'><o:p>&nbsp;</o:p></span></b></p>
